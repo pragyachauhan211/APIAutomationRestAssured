@@ -7,7 +7,7 @@ import junit.framework.Assert;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class APIPractice1 
+public class HttpMethodsAPIPractice1 
 {
 	   @SuppressWarnings("deprecation")
 	public static void main( String[] args )
@@ -19,7 +19,7 @@ public class APIPractice1
 	        // POST 
 	        String response = given().log().all().queryParam("key", "qaclick123").queryParam("place_id ", "0fd2e3d273d072ea64a00b6d4bd6ae76")
 	        .header("Content-Type","application/json") // request header message
-	        .body(Utilities.bodyMessage()) // request body message
+	        .body(Utilities.httpmethodPracticeRequestMessage()) // request body message
 	        .when().log().all().post("maps/api/place/add/json") // resource name 
 	        .then().log().all().assertThat().statusCode(200).body("scope", equalTo("APP")) // expected response
 	        .header("server", "Apache/2.4.52 (Ubuntu)") // expected response header
@@ -46,7 +46,7 @@ public class APIPractice1
 	   .when().log().all().put("maps/api/place/update/json") // resource name 
 	   .then().log().all().assertThat().statusCode(200).body("msg", equalTo("Address successfully updated")); // expected response
 	    
-	   // GET 
+	   // GET
 	 String getResponseMessage = given().log().all().queryParam("key", "qaclick123").queryParam("place_id",placeID)   
 			 .when().log().all().get("maps/api/place/get/json") // resource name 
 		        .then().log().all().assertThat().statusCode(200) // expected response
