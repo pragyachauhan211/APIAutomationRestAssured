@@ -1,5 +1,9 @@
 package API.AutomationTesting;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class Utilities {
 	
 	public static String httpmethodPracticeRequestMessage()
@@ -52,6 +56,12 @@ public class Utilities {
 				+ "    }\r\n"
 				+ "  ]\r\n"
 				+ "}";
+	}
+	
+	public static String GenerateStringFromResource(String path) throws IOException {
+
+	    return new String(Files.readAllBytes(Paths.get(path))); // to get the values from json file in string format
+
 	}
 
 
