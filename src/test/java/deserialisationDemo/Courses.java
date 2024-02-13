@@ -1,4 +1,4 @@
-package pojo;
+package deserialisationDemo;
 
 import static io.restassured.RestAssured.*;
 
@@ -10,9 +10,9 @@ import io.restassured.path.json.JsonPath;
 // POJO CLasses
 public class Courses {
 	
-	private List<WebAutomation> webAutomation; // array list of web automation 
-	private List<API> api;
-	private List<Mobile> mobile;
+	private List<WebAutomation> webAutomation; // contain array element
+	private List<API> api; // contain array element
+	private List<Mobile> mobile; // contain array element
 	
 	public List<WebAutomation> getWebAutomation() {
 		return webAutomation;

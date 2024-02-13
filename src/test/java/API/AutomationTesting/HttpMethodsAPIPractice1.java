@@ -2,10 +2,10 @@ package API.AutomationTesting;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
-import junit.framework.Assert;
-
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
+
+import org.testng.Assert;
 
 public class HttpMethodsAPIPractice1 
 {

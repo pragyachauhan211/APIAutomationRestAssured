@@ -1,4 +1,4 @@
-package pojo;
+package deserialisationDemo;
 
 import static io.restassured.RestAssured.*;
 

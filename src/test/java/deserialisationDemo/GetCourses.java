@@ -1,4 +1,4 @@
-package pojo;
+package deserialisationDemo;
 
 // POJO CLasses
 public class GetCourses {
@@ -7,7 +7,7 @@ public class GetCourses {
 	private String url;
 	private String services;
 	private String expertise;
-	private Courses courses;
+	private Courses courses; // contain nested sub class
 	private String linkedIn;
 	
 	
@@ -54,11 +54,11 @@ public class GetCourses {
 		this.expertise = expertise;
 	}
 
-	public pojo.Courses getCourses() {
+	public deserialisationDemo.Courses getCourses() {
 		return courses;
 	}
 
-	public void setCourses(pojo.Courses courses) {
+	public void setCourses(deserialisationDemo.Courses courses) {
 		this.courses = courses;
 	}
 

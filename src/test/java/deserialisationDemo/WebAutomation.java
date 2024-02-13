@@ -1,11 +1,11 @@
-package pojo;
+package deserialisationDemo;
 
 import static io.restassured.RestAssured.*;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
 // POJO CLasses
-public class Mobile {
+public class WebAutomation {
 	
 	private String courseTitle;
 	private String price;
