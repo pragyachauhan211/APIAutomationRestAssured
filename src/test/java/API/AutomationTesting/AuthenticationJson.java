@@ -7,6 +7,7 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
 public class AuthenticationJson {
+	static String getResponseMessage;
 
 	public static void main(String[] args) 
 {
@@ -30,7 +31,7 @@ public class AuthenticationJson {
         System.out.println("The access token is "+accessToken); // print the access token
         
         // GET METHOD
-        String getResponseMessage= given().queryParams("access_token", accessToken).when().get("https://rahulshettyacademy.com/oauthapi/getCourseDetails").asString();
+        getResponseMessage= given().queryParams("access_token", accessToken).when().get("https://rahulshettyacademy.com/oauthapi/getCourseDetails").asString();
 
         System.out.println(getResponseMessage);
 
